@@ -3,7 +3,7 @@ CDL_REGRESS = ${CDL_ROOT}/libexec/cdl/cdl_regress.py
 
 .PHONY:smoke
 smoke:
-	${CDL_REGRESS} --pyengine-dir=${BUILD_ROOT} --package-dir regress:${SRC_ROOT}/python --suite-dir=python --only-tests 'test_comparator' test_i2c
+	${CDL_REGRESS} --pyengine-dir=${BUILD_ROOT} --package-dir regress:${SRC_ROOT}/python --package-dir regress:$(abspath ${SRC_ROOT}/../atcf_hardware_apb/python) --suite-dir=python test_i2c
 
 .PHONY:regress
 regress:
