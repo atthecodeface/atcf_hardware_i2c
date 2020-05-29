@@ -28,5 +28,6 @@ class ApbModules(cdl_desc.Modules):
     modules = []
     modules += [ CdlModule("apb_target_i2c_master") ]
     modules += [ CdlModule("i2c_slave_apb_master") ]
+    modules += [ CdlModule("tb_apb_target_i2c", src_dir=tb_src_dir) ]
     pass
 
