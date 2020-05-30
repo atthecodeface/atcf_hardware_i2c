@@ -115,8 +115,7 @@ class ApbI2cHardware(HardwareThDut):
 #c TestApbI2c
 class TestApbI2c(TestCase):
     hw = ApbI2cHardware
-    def test_1(self)->None:
-        self.run_test(hw_args={"th_exec_file_object_fn":apb_target_i2c_test_one},run_time=100*1000)
-        pass
+    _tests = {"simple": (apb_target_i2c_test_one, 100*1000, {}),
+              }
     pass
 
